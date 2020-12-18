@@ -6,6 +6,17 @@ package it.unive.dais.po1.exercise1;
  * @since 1.0
  */
 public class TicTacToeBoard {
+    private Mark[][] board;
+    private Mark winner = null;
+
+    public TicTacToeBoard() {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                this.board[i][j] = null;
+            }
+        }
+    }
+
     /**
      * Puts a mark in a given cell
      *
@@ -16,7 +27,13 @@ public class TicTacToeBoard {
      * it filled it, false otherwise
      */
     public boolean put(Mark c, int x, int y) {
-        return false;
+        boolean res = (this.winner != null) || (this.board[x][y] != null);
+
+        if (res) {
+            this.board[x][y] = c;
+        }
+
+        return res;
     }
 
     /**
@@ -26,7 +43,7 @@ public class TicTacToeBoard {
      * @return the mark in the given cell, null if the cell is empty
      */
     public Mark getMark(int x, int y) {
-        return null;
+        return this.board[x][y];
     }
 
     /**
@@ -35,7 +52,7 @@ public class TicTacToeBoard {
      * @return the mark of the winner of the game, or null if there is not yet a winner
      */
     public Mark winner() {
-        return null;
+        return this.winner;
     }
 
     /**
@@ -44,7 +61,19 @@ public class TicTacToeBoard {
      * @return true iff the board is full
      */
     public boolean isFull() {
-        return false;
+        boolean shortcut = false;
+        int i = 0;
+        int j = 0;
+
+        while (i < 3 && !shortcut) {
+            while (j < 3 && !shortcut) {
+                shortcut = this.board[i][j] == null;
+                j++;
+            }
+            i++;
+        }
+
+        return shortcut;
     }
 
 }
