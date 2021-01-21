@@ -42,7 +42,12 @@ abstract public class Board {
      * @return the mark in the given cell, null if the cell is empty
      */
     public Mark getMark(int x, int y) {
-        return board[x][y];
+        int boardDim = getDimension();
+        if (x >= 0 && y >= 0 && x < boardDim && y < boardDim) {
+            return this.board[x][y];
+        } else {
+            return null;
+        }
     }
 
     /**
