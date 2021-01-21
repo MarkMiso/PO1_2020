@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6e3ed28-ad73-47d2-9c80-6fad5d877f4a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unive/dais/po1/exercise1/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unive/dais/po1/exercise1/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unive/dais/po1/exercise1/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unive/dais/po1/exercise1/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unive/dais/po1/exercise1/TicTacToeBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unive/dais/po1/exercise1/TicTacToeBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +39,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RunManager" selected="JUnit.TesterCodeStructure">
@@ -160,12 +157,35 @@
       <workItem from="1608327120462" duration="523000" />
       <workItem from="1611230248629" duration="372000" />
       <workItem from="1611230711434" duration="3734000" />
-      <workItem from="1611243519231" duration="5763000" />
+      <workItem from="1611243519231" duration="6011000" />
     </task>
+    <task id="LOCAL-00001" summary="Fix exercise 1">
+      <created>1611249427866</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1611249427866</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fix exercise 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix exercise 1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
