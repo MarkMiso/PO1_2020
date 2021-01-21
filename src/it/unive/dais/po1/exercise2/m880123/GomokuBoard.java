@@ -14,6 +14,12 @@ public class GomokuBoard extends Board {
         super(dimension);
     }
 
+    /**
+     * Returns if the Mark in a cell is a winner
+     * @param x x coordinate
+     * @param y y coordinate
+     * @return true if the Mark is a winner, else false
+     */
     private boolean isWinner(int x, int y) {
         int i, j;
         boolean cond1, cond2, cond3, cond4;
