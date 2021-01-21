@@ -24,7 +24,7 @@ public class Game {
                 round = player1.play(board);
             else round = player2.play(board);
             if(! round) {
-                System.out.println("Player "+((i%2)+1)+"refusing to play, terminating the game");
+                System.out.println("Player "+((i%2)+1)+" refusing to play, terminating the game");
                 return null;
             }
             System.out.println("Board after round "+i);

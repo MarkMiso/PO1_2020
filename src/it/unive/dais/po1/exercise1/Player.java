@@ -9,7 +9,7 @@ public class Player {
     private Mark mark;
 
     /**
-     * Intializes a player using the given Mark
+     * Initializes a player using the given Mark
      * @param mark the mark of the player
      */
     public Player(Mark mark) {
@@ -18,16 +18,17 @@ public class Player {
 
     /**
      * Plays a round of the game.
-     *
-     * @param board
+     * @param board TicTacToe board
      * @return true if the player was able to
      */
     public boolean play(TicTacToeBoard board) {
-        int i = 0;
-        int j = 0;
+        int i, j;
         boolean cond = false;
 
+        i = 0;
+        j = 0;
         while (i < 3 && !cond) {
+            j = 0;
             while (j < 3 && !cond) {
                 cond = board.getMark(i, j) == null;
                 j++;
@@ -35,6 +36,6 @@ public class Player {
             i++;
         }
 
-        return board.put(mark, i - 1, j - 1);
+        return board.put(this.mark, i - 1, j - 1);
     }
 }

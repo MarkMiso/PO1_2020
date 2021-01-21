@@ -7,9 +7,9 @@ package it.unive.dais.po1.exercise1;
  */
 public class TicTacToeBoard {
     private Mark[][] board;
-    private Mark winner = null;
 
     public TicTacToeBoard() {
+        board = new Mark[3][3];
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 this.board[i][j] = null;
@@ -27,7 +27,7 @@ public class TicTacToeBoard {
      * it filled it, false otherwise
      */
     public boolean put(Mark c, int x, int y) {
-        boolean res = (this.winner != null) || (this.board[x][y] != null);
+        boolean res = (winner() == null) && (this.board[x][y] == null);
 
         if (res) {
             this.board[x][y] = c;
@@ -52,7 +52,33 @@ public class TicTacToeBoard {
      * @return the mark of the winner of the game, or null if there is not yet a winner
      */
     public Mark winner() {
-        return this.winner;
+        Mark winner = null;
+        boolean cond = false;
+
+        if ((!cond && getMark(0,0) != null) && ((getMark(0, 0) == getMark(1, 1)) && (getMark(1,1) == getMark(2,2)))) {
+            winner = getMark(1,1);
+            cond = true;
+        }
+
+        if ((!cond && getMark(0,2) != null) && ((getMark(0, 2) == getMark(1, 1)) && (getMark(1,1) == getMark(2,0)))) {
+            winner = getMark(1,1);
+            cond = true;
+        }
+
+        int i = 0;
+        while (i < 3 && !cond) {
+            cond = (getMark(i,0) != null) && ((getMark(i, 0) == getMark(i, 1)) && (getMark(i,1) == getMark(i,2)));
+            if (cond) {
+                winner = getMark(i, 1);
+            } else {
+                cond = (getMark(0, i) != null) && ((getMark(0, i) == getMark(1, i)) && (getMark(1, i) == getMark(2, i)));
+                if (cond) { winner = getMark(1, i); }
+            }
+
+            i++;
+        }
+
+        return winner;
     }
 
     /**
@@ -61,13 +87,13 @@ public class TicTacToeBoard {
      * @return true iff the board is full
      */
     public boolean isFull() {
-        boolean shortcut = false;
+        boolean shortcut = true;
         int i = 0;
         int j = 0;
 
-        while (i < 3 && !shortcut) {
-            while (j < 3 && !shortcut) {
-                shortcut = this.board[i][j] == null;
+        while (i < 3 && shortcut) {
+            while (j < 3 && shortcut) {
+                shortcut = this.board[i][j] != null;
                 j++;
             }
             i++;
